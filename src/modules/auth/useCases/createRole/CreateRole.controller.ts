@@ -1,10 +1,12 @@
-import { Prisma } from '.prisma/client';
+import { Body, Controller, Post, UseGuards } from '@nestjs/common';
+import { Prisma } from '@prisma/client';
+
+import { Role } from '@config/enums/Role.enum';
+import { Is } from '@shared/decorators/Is.decorator';
 import { JwtAuthGuard } from '@shared/guards/JwtAuth.guard';
 import { RolesGuard } from '@shared/guards/Roles.guard';
-import { Body, Controller, Post, UseGuards } from '@nestjs/common';
-import { Is } from '@shared/decorators/Is.decorator';
+
 import { CreateRoleUseCase } from './CreateRole.useCase';
-import { Role } from '@config/enums/Role.enum';
 
 @Controller('roles')
 export class CreateRoleController {

@@ -1,5 +1,7 @@
-import { HASH_PROVIDER } from '@config/constants/injectKeys.constants';
 import { Module } from '@nestjs/common';
+
+import { HASH_PROVIDER } from '@config/constants/injectKeys.constants';
+
 import BCryptHashProvider from './implementations/BCryptHash.provider';
 
 @Module({

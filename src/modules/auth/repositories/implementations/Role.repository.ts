@@ -1,7 +1,9 @@
-import { Prisma, Role } from '.prisma/client';
-import { UpdateRoleInput } from '@modules/auth/dtos/UpdateRole.input';
 import { Injectable } from '@nestjs/common';
+import { Prisma, Role } from '@prisma/client';
+
+import { UpdateRoleInput } from '@modules/auth/dtos/UpdateRole.input';
 import { PrismaService } from '@shared/infra/prisma';
+
 import { IRoleRepository, RoleInclude } from '../RoleRepository.interface';
 
 @Injectable()

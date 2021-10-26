@@ -1,4 +1,5 @@
 import { User, Prisma, Permission, Role } from '@prisma/client';
+
 import { UpdateUserInput } from '../dtos/UpdateUser.input';
 
 export type UserInclude = User & {

@@ -1,6 +1,8 @@
-import { Product, Prisma } from '@prisma/client';
 import { Injectable } from '@nestjs/common';
+import { Product, Prisma } from '@prisma/client';
+
 import { PrismaService } from '@shared/infra/prisma';
+
 import { IProductRepository } from '../ProductRepository.interface';
 
 @Injectable()

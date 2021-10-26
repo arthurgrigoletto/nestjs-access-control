@@ -1,10 +1,12 @@
-import { Prisma } from '.prisma/client';
+import { Body, Controller, Post, UseGuards } from '@nestjs/common';
+import { Prisma } from '@prisma/client';
+
+import { Permission } from '@config/enums/Permission.enum';
+import { Can } from '@shared/decorators/Can.decorator';
 import { ClaimsGuard } from '@shared/guards/Claims.guard';
 import { JwtAuthGuard } from '@shared/guards/JwtAuth.guard';
-import { Body, Controller, Post, UseGuards } from '@nestjs/common';
-import { Can } from '@shared/decorators/Can.decorator';
+
 import { CreateProductUseCase } from './CreateProduct.useCase';
-import { Permission } from '@config/enums/Permission.enum';
 
 @Controller('products')
 export class CreateProductController {

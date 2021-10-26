@@ -1,7 +1,8 @@
-import { Prisma } from '.prisma/client';
+import { ConflictException, Inject, Injectable } from '@nestjs/common';
+import { Prisma } from '@prisma/client';
+
 import { PERMISSION_REPOSITORY } from '@config/constants/injectKeys.constants';
 import { IPermissionRepository } from '@modules/auth/repositories/PermissionRepository.interface';
-import { ConflictException, Inject, Injectable } from '@nestjs/common';
 
 @Injectable()
 export class CreatePermissionUseCase {

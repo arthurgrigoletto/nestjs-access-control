@@ -1,4 +1,5 @@
 import { Role, Prisma, Permission } from '@prisma/client';
+
 import { UpdateRoleInput } from '../dtos/UpdateRole.input';
 
 export type RoleInclude = Role & {

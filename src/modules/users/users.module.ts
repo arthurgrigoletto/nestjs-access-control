@@ -1,3 +1,5 @@
+import { Module } from '@nestjs/common';
+
 import {
   PERMISSION_REPOSITORY,
   ROLE_REPOSITORY,
@@ -5,9 +7,9 @@ import {
 } from '@config/constants/injectKeys.constants';
 import { PermissionRepository } from '@modules/auth/repositories/implementations/Permission.repository';
 import { RoleRepository } from '@modules/auth/repositories/implementations/Role.repository';
-import { Module } from '@nestjs/common';
 import { PrismaService } from '@shared/infra/prisma';
 import { HashProviderModule } from '@shared/providers/HashProvider/hashProvider.module';
+
 import { UserRepository } from './repositories/implementations/Users.repository';
 import { CreateUserController } from './useCases/createUser/CreateUser.controller';
 import { CreateUserUseCase } from './useCases/createUser/CreateUser.useCase';

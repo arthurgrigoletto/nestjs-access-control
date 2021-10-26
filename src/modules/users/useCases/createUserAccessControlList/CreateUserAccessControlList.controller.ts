@@ -1,9 +1,11 @@
-import { JwtAuthGuard } from '@shared/guards/JwtAuth.guard';
 import { Body, Controller, Post, UseGuards } from '@nestjs/common';
+
 import {
   CurrentUser,
   CurrentUserType,
 } from '@shared/decorators/CurrentUser.decorator';
+import { JwtAuthGuard } from '@shared/guards/JwtAuth.guard';
+
 import { CreateUserAccessControlListUseCase } from './CreateUserAccessControlList.useCase';
 
 interface IRequest {

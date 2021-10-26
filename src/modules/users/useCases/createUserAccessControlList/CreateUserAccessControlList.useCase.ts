@@ -1,3 +1,5 @@
+import { Inject, Injectable, NotFoundException } from '@nestjs/common';
+
 import {
   PERMISSION_REPOSITORY,
   ROLE_REPOSITORY,
@@ -10,7 +12,6 @@ import {
   IUserRepository,
   UserInclude,
 } from '@modules/users/repositories/UserRepository.interface';
-import { Inject, Injectable, NotFoundException } from '@nestjs/common';
 
 @Injectable()
 export class CreateUserAccessControlListUseCase {

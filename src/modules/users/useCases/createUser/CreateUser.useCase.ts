@@ -1,10 +1,11 @@
-import { User, Prisma } from '@prisma/client';
 import { ConflictException, Inject, Injectable } from '@nestjs/common';
+import { User, Prisma } from '@prisma/client';
+
+import { USER_EXISTS } from '@config/constants/erros.constants';
 import {
   HASH_PROVIDER,
   USER_REPOSITORY,
 } from '@config/constants/injectKeys.constants';
-import { USER_EXISTS } from '@config/constants/erros.constants';
 import { IUserRepository } from '@modules/users/repositories/UserRepository.interface';
 import { IHashProvider } from '@shared/providers/HashProvider/models/hashProvider.interface';
 

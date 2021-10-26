@@ -1,5 +1,6 @@
-import { Product } from '@prisma/client';
 import { Inject, Injectable } from '@nestjs/common';
+import { Product } from '@prisma/client';
+
 import { PRODUCT_REPOSITORY } from '@config/constants/injectKeys.constants';
 import { IProductRepository } from '@modules/products/repositories/ProductRepository.interface';
 

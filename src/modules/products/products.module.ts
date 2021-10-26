@@ -1,6 +1,8 @@
-import { PRODUCT_REPOSITORY } from '@config/constants/injectKeys.constants';
 import { Module } from '@nestjs/common';
+
+import { PRODUCT_REPOSITORY } from '@config/constants/injectKeys.constants';
 import { PrismaService } from '@shared/infra/prisma';
+
 import { ProductRepository } from './repositories/implementations/Product.repository';
 import { CreateProductController } from './useCases/createProduct/CreateProduct.controller';
 import { CreateProductUseCase } from './useCases/createProduct/CreateProduct.useCase';

@@ -1,6 +1,8 @@
-import { Prisma, Permission } from '.prisma/client';
 import { Injectable } from '@nestjs/common';
+import { Prisma, Permission } from '@prisma/client';
+
 import { PrismaService } from '@shared/infra/prisma';
+
 import { IPermissionRepository } from '../PermissionRepository.interface';
 
 @Injectable()

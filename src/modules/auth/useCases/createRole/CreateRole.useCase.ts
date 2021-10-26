@@ -1,7 +1,8 @@
-import { Prisma } from '.prisma/client';
+import { ConflictException, Inject, Injectable } from '@nestjs/common';
+import { Prisma } from '@prisma/client';
+
 import { ROLE_REPOSITORY } from '@config/constants/injectKeys.constants';
 import { IRoleRepository } from '@modules/auth/repositories/RoleRepository.interface';
-import { ConflictException, Inject, Injectable } from '@nestjs/common';
 
 @Injectable()
 export class CreateRoleUseCase {

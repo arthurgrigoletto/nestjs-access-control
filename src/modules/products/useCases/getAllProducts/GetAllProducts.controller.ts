@@ -1,4 +1,5 @@
 import { Controller, Get } from '@nestjs/common';
+
 import { GetAllProductsUseCase } from './GetAllProducts.useCase';
 
 @Controller('products')

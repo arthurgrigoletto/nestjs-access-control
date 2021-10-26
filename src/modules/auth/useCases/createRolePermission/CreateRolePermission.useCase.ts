@@ -1,3 +1,5 @@
+import { Inject, Injectable, NotFoundException } from '@nestjs/common';
+
 import {
   PERMISSION_REPOSITORY,
   ROLE_REPOSITORY,
@@ -8,7 +10,6 @@ import {
   IRoleRepository,
   RoleInclude,
 } from '@modules/auth/repositories/RoleRepository.interface';
-import { Inject, Injectable, NotFoundException } from '@nestjs/common';
 
 @Injectable()
 export class CreateRolePermissionUseCase {

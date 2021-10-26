@@ -1,10 +1,11 @@
-import { USER_REPOSITORY } from '@config/constants/injectKeys.constants';
-import { IUserRepository } from '@modules/users/repositories/UserRepository.interface';
 import { Inject, Injectable, UnauthorizedException } from '@nestjs/common';
 import { PassportStrategy } from '@nestjs/passport';
-import { ExtractJwt, Strategy } from 'passport-jwt';
-import authConfig from '@config/auth';
 import { User } from '@prisma/client';
+import { ExtractJwt, Strategy } from 'passport-jwt';
+
+import authConfig from '@config/auth';
+import { USER_REPOSITORY } from '@config/constants/injectKeys.constants';
+import { IUserRepository } from '@modules/users/repositories/UserRepository.interface';
 
 interface IPayload {
   sub: User['id'];

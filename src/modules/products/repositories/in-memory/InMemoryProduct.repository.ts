@@ -1,6 +1,7 @@
+import { Injectable } from '@nestjs/common';
 import { Product, Prisma } from '@prisma/client';
 import { v4 as uuidV4 } from 'uuid';
-import { Injectable } from '@nestjs/common';
+
 import { IProductRepository } from '../ProductRepository.interface';
 
 @Injectable()
