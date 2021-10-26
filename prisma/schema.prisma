@@ -1,0 +1,64 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       String @id @default(uuid())
+  username String
+  password String
+
+  roles       Role[]
+  permissions Permission[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("users")
+}
+
+model Permission {
+  id          String @id @default(uuid())
+  name        String
+  description String
+
+  roles Role[]
+  users User[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("permissions")
+}
+
+model Role {
+  id          String @id @default(uuid())
+  name        String
+  description String
+
+  permissions Permission[]
+  users       User[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("roles")
+}
+
+model Product {
+  id          String @id @default(uuid())
+  name        String
+  description String
+  price       Int
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@map("products")
+}
